@@ -13,7 +13,15 @@ import store from './store'
 import router from './router'
 
 import '@/icons' // icon
-import '@/permission' // permission control
+import '@/permission' // token权限处理
+
+import * as directives from '@/directives'
+
+console.log(directives, Object.keys(directives))
+// 可以同时注册多个自定义指令
+Object.keys(directives).forEach(key => {
+  Vue.directive(key, directives[key])
+})
 
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })

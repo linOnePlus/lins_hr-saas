@@ -35,8 +35,16 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    // 配置vuecli反向代理
+    proxy: {
+      // 这里的api 表示如果我们的请求地址有/api的时候,就出触发代理机制
+      // 本地的前端  =》 本地的后端  =》 代理我们向另一个服务器发请求
+      '/api': {
+        target: 'http://ihrm-java.itheima.net/', // 本地后端的代理地址
+        changeOrigin: true // 只有这个值为true的情况下 才表示开启跨域
+      }
     }
-    // before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

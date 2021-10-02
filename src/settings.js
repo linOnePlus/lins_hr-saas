@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: 'lins_hrSass',
 
   /**
    * @type {boolean} true | false
@@ -14,5 +14,5 @@ module.exports = {
    * @description Whether show the logo in sidebar
    */
   // 显示左侧菜单logo
-  sidebarLogo: false
+  sidebarLogo: true
 }
