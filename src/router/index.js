@@ -30,6 +30,27 @@ import Layout from '@/layout'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
+// 临时合并
+import approvalsRouter from './modules/approvals'
+import departmentsRouter from './modules/departments'
+import employeesRouter from './modules/employees'
+import permissionRouter from './modules/permission'
+import attendancesRouter from './modules/attendances'
+import salarysRouter from './modules/salarys'
+import settingRouter from './modules/setting'
+import socialRouter from './modules/social'
+
+export const asyncRoutes = [
+  approvalsRouter,
+  departmentsRouter,
+  employeesRouter,
+  permissionRouter,
+  attendancesRouter,
+  salarysRouter,
+  settingRouter,
+  socialRouter
+]
+
 // 静态路由 所有人都可以访问
 export const constantRoutes = [
   {
@@ -63,7 +84,7 @@ export const constantRoutes = [
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
+  routes: [...constantRoutes, ...asyncRoutes]
 })
 
 const router = createRouter()
