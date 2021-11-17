@@ -93,10 +93,6 @@ Copyright (c) 2017-present PanJiaChen
 项目基于vue-element-admin模板进行二次开发，使用git进行项目托管
 使用Vuex+cookie+token技术储存并管理用户信息
 使用Vue-router实现页面之间跳转，路由守卫实现目标页面权限判断
+ 
 
-
-<<<<<<< HEAD
-change to github 12.03
-=======
-change to github14.35
->>>>>>> f2def318dbeb6e52ba014d70e453c920f4c66a75
+change
